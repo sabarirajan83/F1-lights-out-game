@@ -1,0 +1,61 @@
+body {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+
+h1 {
+  font-size: 50px;
+  color: white;
+  background-color: red;
+  padding: 20px;
+  margin-bottom: 50px;
+  font-weight: bold;
+  letter-spacing: 10px;
+}
+
+.lights {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.column {
+  background: black;
+  padding: 15px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.light {
+  width: 60px;
+  height: 60px;
+  background: #222;
+  border-radius: 50%;
+}
+
+.column.active .light {
+  background: red;
+  box-shadow: 0 0 15px red;
+}
+
+#time {
+  margin-top: 60px;
+  font-size: 100px;
+  font-family: Arial, sans-serif;
+}
+
+#instructions {
+  font-size: 60px;
+  margin-top: 30px;
+}
+
+#highscore {
+  font-size: 60px;
+  margin-top: 30px;
+  background-color: yellow;
+}
