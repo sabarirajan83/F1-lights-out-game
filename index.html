@@ -3,49 +3,143 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>F1 Reflex Test</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>F1 Reflex Test - Starting Lights</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800;900&family=Rajdhani:wght@600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 
-<body>
-    <div>
-        <h1>F1 Reflex Test</h1>
-        <div class="lights">
-            <div class="column">
-                <div class="light"></div>
-                <div class="light"></div>
-                <div class="light"></div>
-                <div class="light"></div>
+<body class="state-ready">
+    <div class="game-container">
+        <!-- Top Navigation & Branding -->
+        <header class="f1-header">
+            <div class="f1-badge">
+                <span class="f1-logo">F1</span>
+                <span class="f1-sub">START LIGHTS &bull; REFLEX TELEMETRY</span>
             </div>
-            <div class="column">
-                <div class="light"></div>
-                <div class="light"></div>
-                <div class="light"></div>
-                <div class="light"></div>
+            <div class="header-right">
+                <button id="soundToggle" class="sound-toggle-btn" aria-label="Toggle Audio" title="Toggle Sound">
+                    <span id="soundIcon">🔊</span>
+                    <span class="sound-text">SFX</span>
+                </button>
             </div>
-            <div class="column">
-                <div class="light"></div>
-                <div class="light"></div>
-                <div class="light"></div>
-                <div class="light"></div>
+        </header>
+
+        <!-- Starting Light Gantry Arch (posts continue down to the bottom of the page) -->
+        <div class="gantry-arch" id="gantryArch">
+            <!-- Left Support Pillar / Post (stretches to bottom) -->
+            <div class="gantry-post gantry-post-left">
+                <div class="post-cap"></div>
+                <div class="post-beam">
+                    <div class="post-lattice"></div>
+                </div>
+                <div class="post-barrier">
+                    <div class="barrier-stripe"></div>
+                </div>
             </div>
-            <div class="column">
-                <div class="light"></div>
-                <div class="light"></div>
-                <div class="light"></div>
-                <div class="light"></div>
+
+            <!-- Overhead Horizontal Arch Structure -->
+            <div class="gantry-overhead">
+                <div class="gantry-corner-bracket bracket-left"></div>
+                <div class="gantry-crossbeam">
+                    <div class="crossbeam-hazard-strip"></div>
+                    <div class="gantry-banner">
+                        <span class="banner-f1">FORMULA 1 GRAND PRIX</span>
+                        <span class="banner-dots">&bull; &bull; &bull;</span>
+                        <span class="banner-sub">STARTING GRID GANTRY</span>
+                    </div>
+                    <div class="crossbeam-truss"></div>
+                </div>
+                <div class="gantry-corner-bracket bracket-right"></div>
+
+                <!-- 5 Suspended Starting Light Columns (individual pods without background box) -->
+                <div class="lights-mount">
+                    <div class="lights" id="lights">
+                        <!-- Column 1 -->
+                        <div class="column" data-col="1">
+                            <div class="light-pod"><div class="visor"></div><div class="light"></div></div>
+                            <div class="light-pod"><div class="visor"></div><div class="light"></div></div>
+                            <div class="light-pod"><div class="visor"></div><div class="light"></div></div>
+                            <div class="light-pod"><div class="visor"></div><div class="light"></div></div>
+                        </div>
+                        <!-- Column 2 -->
+                        <div class="column" data-col="2">
+                            <div class="light-pod"><div class="visor"></div><div class="light"></div></div>
+                            <div class="light-pod"><div class="visor"></div><div class="light"></div></div>
+                            <div class="light-pod"><div class="visor"></div><div class="light"></div></div>
+                            <div class="light-pod"><div class="visor"></div><div class="light"></div></div>
+                        </div>
+                        <!-- Column 3 -->
+                        <div class="column" data-col="3">
+                            <div class="light-pod"><div class="visor"></div><div class="light"></div></div>
+                            <div class="light-pod"><div class="visor"></div><div class="light"></div></div>
+                            <div class="light-pod"><div class="visor"></div><div class="light"></div></div>
+                            <div class="light-pod"><div class="visor"></div><div class="light"></div></div>
+                        </div>
+                        <!-- Column 4 -->
+                        <div class="column" data-col="4">
+                            <div class="light-pod"><div class="visor"></div><div class="light"></div></div>
+                            <div class="light-pod"><div class="visor"></div><div class="light"></div></div>
+                            <div class="light-pod"><div class="visor"></div><div class="light"></div></div>
+                            <div class="light-pod"><div class="visor"></div><div class="light"></div></div>
+                        </div>
+                        <!-- Column 5 -->
+                        <div class="column" data-col="5">
+                            <div class="light-pod"><div class="visor"></div><div class="light"></div></div>
+                            <div class="light-pod"><div class="visor"></div><div class="light"></div></div>
+                            <div class="light-pod"><div class="visor"></div><div class="light"></div></div>
+                            <div class="light-pod"><div class="visor"></div><div class="light"></div></div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="column">
-                <div class="light"></div>
-                <div class="light"></div>
-                <div class="light"></div>
-                <div class="light"></div>
+
+            <!-- Right Support Pillar / Post (stretches to bottom) -->
+            <div class="gantry-post gantry-post-right">
+                <div class="post-cap"></div>
+                <div class="post-beam">
+                    <div class="post-lattice"></div>
+                </div>
+                <div class="post-barrier">
+                    <div class="barrier-stripe"></div>
+                </div>
             </div>
         </div>
-        <div id="time"></div>
-        <div id="instructions"></div>
-        <div id="highscore"></div>
+
+        <!-- F1 Telemetry HUD & Results Dashboard -->
+        <main class="hud-dashboard">
+            <!-- Digital Timer Readout -->
+            <div class="telemetry-card">
+                <div class="telemetry-header">
+                    <span class="telemetry-tag">FIA OFFICIAL TIMING</span>
+                    <span class="telemetry-status" id="telemetryStatus">READY</span>
+                </div>
+                <div class="timer-display">
+                    <div id="time">0.000</div>
+                    <span class="time-suffix">s</span>
+                </div>
+                <div class="reaction-rating" id="reactionRating">PRESS START TO TEST REFLEXES</div>
+            </div>
+
+            <!-- Instructions & Action Banner -->
+            <div class="instruction-card">
+                <div id="instructions">Click anywhere or press Space to race!</div>
+            </div>
+
+            <!-- Highscore & Driver Benchmark -->
+            <div class="benchmark-card">
+                <div id="highscore">High Score: --</div>
+                <div class="controls-guide">
+                    <span class="guide-key">SPACEBAR</span> or <span class="guide-click">CLICK / TAP ANYWHERE</span>
+                </div>
+            </div>
+        </main>
     </div>
+
+    <!-- Screen Flash State Overlay -->
+    <div class="flash-overlay" id="flashOverlay"></div>
 
     <script src="script.js"></script>
 </body>
